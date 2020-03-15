@@ -1,0 +1,7 @@
+.oculto{
+    display: none !important;
+}
+
+.mostrar{
+    display: inline-block !important;
+}
