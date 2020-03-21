@@ -156,14 +156,19 @@ function mostrarResultados(mayor, menor, promedio){
     const parrafoMayor = document.createElement('p');
     let texto = document.createTextNode(`La edad mayor es: ${mayor}`);
     parrafoMayor.appendChild(texto);
+    parrafoMayor.setAttribute('id', 'mayor');
 
     const parrafoMenor = document.createElement('p');
     texto = document.createTextNode(`La edad menor es: ${menor}`);
     parrafoMenor.appendChild(texto);
+    parrafoMenor.setAttribute('id', 'menor');
+
 
     const parrafoPromedio = document.createElement('p');
     texto = document.createTextNode(`El promedio de edades es: ${promedio}`);
     parrafoPromedio.appendChild(texto);
+    parrafoPromedio.setAttribute('id', 'promedio');
+
 
     document.querySelector('.contenedor-resultados').appendChild(parrafoMayor);
     document.querySelector('.contenedor-resultados').appendChild(parrafoMenor);
