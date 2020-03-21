@@ -1,0 +1,24 @@
+{
+  "name": "clase-12",
+  "version": "1.0.0",
+  "description": "Clase 12 del curso rargentinaprograma",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-dev": "cypress open",
+    "empezar" : "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianaEG/clase-12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianaEG/clase-12/issues"
+  },
+  "homepage": "https://github.com/AdrianaEG/clase-12#readme",
+  "devDependencies": {
+    "cypress": "^4.2.0"
+  }
+}
