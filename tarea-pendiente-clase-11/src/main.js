@@ -11,10 +11,18 @@ $botonSiguiente.onclick = function(e){
         }
         mostrarElemento($botonCalcular);
         ocultarElemento($botonSiguiente);
+        if(document.querySelector('.cantidad-integrantes').classList.contains('error')){
+            document.querySelector('.cantidad-integrantes').classList.remove('error');
+        }    
     }
     else{
-        console.log('MOSTRAR ERROR');
+        mostrarError(document.querySelector('.cantidad-integrantes'));
+        alert('ERROR');//error en cant de integrantes
     }
+}
+
+function mostrarError(elemento){
+    elemento.classList.add('error');
 }
 
 $botonCalcular.onclick = function(e){
@@ -27,10 +35,33 @@ $botonCalcular.onclick = function(e){
         let promedio = calcularPromedio(edades);
 
         mostrarResultados(mayor, menor, promedio);
+
+        eliminarErrorEdades(edades);
     }
     else{
-        console.log('MOSTRAR ERROR');
+        mostrarErrorEdades(edades);
+        alert('ERROR');//error en las edades
     }
+}
+
+function mostrarErrorEdades(elemento){
+    for(let i=0; i<elemento.length; i++){
+        if(edadEsIncorrecta(elemento[i])){
+            mostrarError(elemento[i]);
+        }
+    }
+}
+
+function eliminarErrorEdades(elemento){
+    for(let i=0; i<elemento.length; i++){
+        if(elemento[i].classList.contains('error')){
+            elemento[i].classList.remove('error');
+        }
+    }
+}
+
+function edadEsIncorrecta(elemento){
+    return ((elemento.value == '') || (elemento.value <=0) ||(elemento.value %1 !== 0));
 }
 
 $botonResetear.onclick = function(e){
@@ -137,5 +168,4 @@ function mostrarResultados(mayor, menor, promedio){
     document.querySelector('.contenedor-resultados').appendChild(parrafoMayor);
     document.querySelector('.contenedor-resultados').appendChild(parrafoMenor);
     document.querySelector('.contenedor-resultados').appendChild(parrafoPromedio);
-
 }

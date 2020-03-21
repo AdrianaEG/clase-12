@@ -5,3 +5,7 @@
 .mostrar{
     display: inline-block !important;
 }
+
+.error{
+    border: solid 1px red;
+}
