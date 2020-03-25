@@ -158,3 +158,19 @@ $.ajax({
 //asíncrono significa que no va uno después del otro...
 console.log("esto pasa antes de la respuesta de $.ajax");
 */
+
+/* CON FETCH: 
+fetch("https://api.exchangeratesapi.io/latest")//esta promesa es un objeto que tiene un método then
+.then(respuesta => respuesta.json())//el métdo then significa hace esto y una vez que lo hagas ejecuta esta funcion, el then lo que tiene es que también se
+// puede concatenar(concepto de chaining se puede aplicar acá)
+//lo siguiente es equivalente a lo de arriba:
+//.then(function(respuesta){return respuesta.json();});
+.then(respuesta =>{//esta respuesta es el resultado de respuesta.json(). then siempre toma un parámetro, ese parámetro está definido por la función anterior
+    //$("#resultado").text($('#resultado').text() + JSON.stringify(respuesta));
+    console.log('el sitio web contesto');
+})
+.catch(error => console.error("falló", error));//el .catch es para decir... si no pudiste resolver que me myestre un error. 
+
+console.log("esto pasa antes que la respuesta de fetch");
+*/
+
