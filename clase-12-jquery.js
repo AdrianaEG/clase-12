@@ -271,6 +271,11 @@ verificarMayorEdad(edad)
 //todo en las api esta alrededor de recursos. 
 //pokeapi.co/api/v2/pokemon --> pokemon es un recurso, me devuelve un listado con lso pokemones
 
+//sólo para restful web apis
+//si yo hago un get -pokemon.com/pokemon (retorna una lista de pokemones).
+//si hago un post - pokemon 
+
+
 //tareas:
 /*
 - consultar https://exchangeratesapi.io/
@@ -282,4 +287,5 @@ La otra tarea es construir un pokedex
 - consultar documentación https://pokeapi.co/
 - listar pokemones y poder cambiar de pág
 - ver detalles de 1 pokemon incluyendo al menos una foto.
+
 */
