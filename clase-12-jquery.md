@@ -15,7 +15,8 @@ const $elementos = $("#lista li");
 console.table({header: $header.length, elementos:$elementos.length});
 
 //cosas buenas de Jquery. Supongamos que agarro la lista de li (mis elementos)
-//en js hago document.querySelectorAll('#lista li'); supongamos que quiero que me aparezca un alert cada vez que se clickea en cada uno de ellos... Tengo q hacer:
+//en js hago document.querySelectorAll('#lista li'); supongamos que quiero que me aparezca un alert cada vez que se clickea en cada uno de ellos... 
+Tengo q hacer:
 //para hacer eso tengo que hacer...
 //document.querySelectorAll('#lista li').forEach((li)=>li.onclick = function(){console.log('click');} )
 
@@ -146,7 +147,8 @@ $.ajax({
     method: "GET",
     url: "https://api.exchangeratesapi.io/latest",
     //success: function (respuesta){}
-    success: respuesta => { //puedo consultar la documentacion jquery ajax. success es una función que va a ser llamada si el request es exitoso, lleva tres argumentos...
+    success: respuesta => { //puedo consultar la documentacion jquery ajax. success es una función que va a ser llamada si el request es exitoso, 
+        lleva tres argumentos...
         console.log("respuesta de exchangeratespi.io", respuesta);
         $("#resultado").text(JSON.stringify(respuesta));
     },
